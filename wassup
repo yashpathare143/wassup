@@ -1,0 +1,55 @@
+# Creating ROCK PAPER SCISSOR Game
+
+import random     
+
+def game(comp,player):
+    if comp == player:
+        return None
+
+    elif comp == "r":
+        if player == "p":
+            return True
+        elif player == "s":
+            return False
+
+    elif comp == "p":
+        if player == "r":
+            return False
+        elif player == "s":
+            return True
+
+    elif comp == "s":
+        if player == "r":
+            return True
+        elif player == "p":
+            return False
+
+
+
+# Computer's Chance
+randnum = random.randint(1,3)
+
+if randnum == 1:
+    comp = "r"
+
+elif randnum == 2:
+    comp = "p"
+
+elif randnum == 3:
+    comp = "s"
+
+
+# Player's Chance
+player = input("Enter rock(r), paper(p), scissor(s):")
+
+print("Computer Chose:",comp)
+print("Player Chose:",player)
+
+x = game(comp,player) 
+
+if x == None:
+    print("Its a Tie!")
+elif x == True:
+    print("Player Won!")
+elif x == False:
+    print("Player Lost!")
