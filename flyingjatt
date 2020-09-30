@@ -1,6 +1,6 @@
 # Creating ROCK PAPER SCISSOR Game
 
-import Random     
+import random     
 
 def game(comp,player):
     if comp == player:
